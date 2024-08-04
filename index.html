@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CarBarter - Login</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.split-screen {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+
+.left, .right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.right {
+    background-color: #042739;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    max-width: 400px;
+    text-align: center;
+}
+
+.logo {
+    width: 150px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+p {
+    margin: 10px 0;
+}
+
+.highlight {
+    color: #f1c40f;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+input {
+    padding: 15px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+}
+
+button {
+    padding: 15px;
+    border: none;
+    border-radius: 25px;
+    background-color: #00aaff;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0088cc;
+}
+
+a {
+    color: #00aaff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+a.hover {
+    color: #0088cc;
+}
+
+.social-media {
+    margin-top: 20px;
+}
+
+.social-media a {
+    margin: 0 10px;
+}
+
+.social-media img {
+    width: 30px;
+}
+
+footer {
+    margin-top: 20px;
+    font-size: 12px;
+}
+
+.button {
+    display: inline-block;
+    padding: 15px;
+    border: none;
+    border-radius: 25px;
+    background-color: #00aaff;
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #0088cc;
+}
+    </style>
+</head>
+<body>
+    <div class="split-screen">
+        <div class="left">
+            <img src="car-interior.png" alt="Car Interior">
+        </div>
+        <div class="right">
+            <div class="content">
+                <img src="logo.png" alt="CarBarter Logo" class="logo">
+                <h1>The ultimate car marketplace.</h1>
+                <p>Find what you need on <span class="highlight">CarBarter</span></p>
+                <form action="/login" method="post">
+                    <input type="email" name="email" placeholder="Email" required>
+                    <input type="password" name="password" placeholder="Password" required>
+                    <button type="submit">Login</button>
+                </form>
+                <p><a href="#">Forgot Username/ Password</a></p>
+                <p>Not a Member?</p>
+                <button class="button" onclick="window.location.href='createaccount2.html'">Create Account</button>
+                <div class="social-media">
+                    <a href="https://www.instagram.com"><img src="instagram.jpg" alt="Instagram">Instagram</a>
+                    <a href="https://www.facebook.com"><img src="facebook.jpg" alt="Facebook">Facebook</a>
+                </div>
+                <footer>
+                    <p>© 2024 CarBarter Pte Ltd. All rights reserved</p>
+                </footer>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="path/to/app.js"></script>
+</body>
+</html>

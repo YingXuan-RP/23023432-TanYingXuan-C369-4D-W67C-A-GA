@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CarBarter Add Listing</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .sidebar {
+            height: 100vh;
+            background-color: #f8f9fa;
+            padding-top: 20px;
+            position: fixed;
+            width: 200px;
+        }
+        .sidebar a {
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+            color: #000;
+        }
+        .sidebar a:hover {
+            background-color: #ddd;
+        }
+        .content {
+            margin-left: 220px;
+            padding: 20px;
+        }
+        .logo {
+            text-align: center;
+        }
+        .logo img {
+            height: 50px;
+        }
+        .form-section {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-section h3 {
+            margin-bottom: 20px;
+        }
+        .form-section .form-group {
+            margin-bottom: 15px;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 12px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+            <img src="logo.png" alt="CarBarter Logo" height="40">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="dashboard5.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Explore</a></li>
+                <li class="nav-item"><a class="nav-link" href="listing7.html">Listings</a></li>
+                <li class="nav-item"><a class="nav-link btn btn-primary text-white" href="addlisting6.html">+ Add Listing</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="sidebar">
+        <a href="dashboard5.html">Dashboard</a>
+        <a href="#">Profile</a>
+        <a href="listing7.html">My Listing</a>
+        <a href="#">Favorites</a>
+        <a href="addlisting6.html">Add Listing</a>
+        <a href="#">Messages</a>
+        <a href="carsearch8.html">Car Search</a>
+        <a href="#">Logout</a>
+    </div>
+    <div class="content">
+        <h3>Add Listing</h3>
+        <p>Ready to jump back in!</p>
+        <div class="form-section">
+            <form action="addlisting6.html" method="post">
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="listingTitle">Listing Title</label>
+                        <input type="text" class="form-control" id="listingTitle" placeholder="Enter title" required>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="condition">Condition</label>
+                        <select id="condition" class="form-control" required>
+                            <option value="" disabled selected>Select condition</option>
+                            <option value="new">New</option>
+                            <option value="used">Used</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="make">Make</label>
+                        <select id="make" class="form-control" required>
+                            <option value="" disabled selected>Select make</option>
+                            <option value="make1">Volvo</option>
+                            <option value="make2">Audi </option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="model">Model</label>
+                        <select id="model" class="form-control" required>
+                            <option value="" disabled selected>Select model</option>
+                            <option value="model1">XC 90</option>
+                            <option value="model2">A8 L55</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="driveType">Drive Type</label>
+                        <select id="driveType" class="form-control" required>
+                            <option value="" disabled selected>Select drive type</option>
+                            <option value="driveType1">4x4</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="year">Year</label>
+                        <select id="year" class="form-control" required>
+                            <option value="" disabled selected>Select year</option>
+                            <option value="2020">2020</option>
+                            <option value="2021">2021</option>
+                            <option value="2022">2022</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="cylinders">Cylinders</label>
+                        <select id="cylinders" class="form-control" required>
+                            <option value="" disabled selected>Select cylinders</option>
+                            <option value="4">4</option>
+                            <option value="6">6</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="transmission">Transmission</label>
+                        <select id="transmission" class="form-control" required>
+                            <option value="" disabled selected>Select transmission</option>
+                            <option value="automatic">Automatic</option>
+                            <option value="manual">Manual</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="price">Price (USD)</label>
+                        <input type="number" class="form-control" id="price" placeholder="Enter price" required>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="fuelType">Fuel Type</label>
+                        <select id="fuelType" class="form-control" required>
+                            <option value="" disabled selected>Select fuel type</option>
+                            <option value="petrol">Petrol</option>
+                            <option value="diesel">Diesel</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="vin">VIN</label>
+                        <input type="number" class="form-control" id="vin" placeholder="Enter VIN" required>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="doors">Doors</label>
+                        <select id="doors" class="form-control" required>
+                            <option value="" disabled selected>Select doors</option>
+                            <option value="2">2</option>
+                            <option value="4">4</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="mileage">Mileage</label>
+                        <input type="number" class="form-control" id="mileage" placeholder="Enter mileage" required>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="color">Color</label>
+                        <select id="color" class="form-control" required>
+                            <option value="" disabled selected>Select color</option>
+                            <option value="red">Red</option>
+                            <option value="blue">Blue</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="description">Description (Optional)</label>
+                    <textarea class="form-control" id="description" rows="3" placeholder="Enter description"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="gallery">Gallery</label>
+                    <input type="file" class="form-control-file" id="gallery" multiple>
+                    <small class="form-text text-muted">Upload images of your car.</small>
+                </div>
+                <div class="form-group">
+                    <label for="videoLink">Video Link (Optional)</label>
+                    <input type="text" class="form-control" id="videoLink" placeholder="Enter video link">
+                    <small class="form-text text-muted">Video - copy any online video link e.g., YouTube, Facebook, Instagram, or .mp4.</small>
+                </div>
+                <button onclick="window.location.href='listing7.html'"type="submit" class="btn btn-primary">Submit Listing</button>
+                <button type="reset" class="btn btn-secondary">Reset Form</button>
+            </form>
+        </div>
+        <div class="footer">
+            © 2024 CarBarter Pte Ltd. All rights reserved.
+        </div>
+    </div>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

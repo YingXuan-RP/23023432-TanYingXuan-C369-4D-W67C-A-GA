@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CarBarter Workflow</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .footer {
+            background-color: #003366;
+            color: white;
+        }
+        .header {
+            padding: 10px 0;
+        }
+        .navbar-custom {
+            background-color: white;
+        }
+        .tab-content {
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-top: none;
+        }
+        .tab-pane {
+            background-color: #f8f9fa;
+        }
+        .credit-check {
+            background-color: #6c757d;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+        .approve-btn, .reject-btn {
+            background-color: #17a2b8;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin: 5px 0;
+            width: 100%;
+        }
+        .reject-btn {
+            background-color: #17a2b8;
+        }
+    </style>
+</head>
+<body>
+    <a class="navbar-brand" href="#">
+        <img src="logo.png" alt="CarBarter Logo" height="40">
+    </a>
+        <div class="float-right mr-3">CarBarter Staff</div>
+
+
+    <nav class="navbar navbar-expand-lg navbar-light navbar-custom">
+        <a class="navbar-brand" href="#">Loan origination for automotive Finance</a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Workflow</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="cash13.html">Cash Management</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container mt-3">
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" id="car-loan-application-tab" data-toggle="tab" href="#car-loan-application" role="tab" aria-controls="car-loan-application" aria-selected="true">Car Loan Application</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="payment-information-tab" data-toggle="tab" href="#payment-information" role="tab" aria-controls="payment-information" aria-selected="false">Payment Information</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="contact-information-tab" data-toggle="tab" href="#contact-information" role="tab" aria-controls="contact-information" aria-selected="false">Contact Information</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="dealers-tab" data-toggle="tab" href="#dealers" role="tab" aria-controls="dealers" aria-selected="false">Dealers</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="note-tab" data-toggle="tab" href="#note" role="tab" aria-controls="note" aria-selected="false">Note</a>
+            </li>
+        </ul>
+        <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="car-loan-application" role="tabpanel" aria-labelledby="car-loan-application-tab">
+                <h5>Buyer Information</h5>
+                <p>Reference No:</p>
+                <p>Name:</p>
+                <p>NRIC:</p>
+                <p>Mobile Number:</p>
+                <p>Car Make:</p>
+                <p>Car Model:</p>
+                <p>Year:</p>
+                <p>Purchase Price:</p>
+                <p>Loan Term:</p>
+                <p>Employment Information:</p>
+                <p>Income Information:</p>
+                <p>Purchase Agreement:</p>
+                <hr>
+                <h5>Approved Loan Information</h5>
+                <p>Approved Loan:</p>
+                <p>Approved Loan Term:</p>
+                <p>Interest:</p>
+                <p>Monthly Payment:</p>
+                <p>Deposit:</p>
+            </div>
+            <div class="tab-pane fade" id="payment-information" role="tabpanel" aria-labelledby="payment-information-tab">
+                Payment Information content...
+            </div>
+            <div class="tab-pane fade" id="contact-information" role="tabpanel" aria-labelledby="contact-information-tab">
+                Contact Information content...
+            </div>
+            <div class="tab-pane fade" id="dealers" role="tabpanel" aria-labelledby="dealers-tab">
+                Dealers content...
+            </div>
+            <div class="tab-pane fade" id="note" role="tabpanel" aria-labelledby="note-tab">
+                Note content...
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-md-9">
+                <button class="credit-check">Credit Check</button>
+            </div>
+            <div class="col-md-3">
+                <button class="approve-btn">Approve</button>
+                <button class="reject-btn">Reject</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer mt-5">
+        <p class="mb-0">© 2024 CarBarter Pte Ltd. All rights reserved</p>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="path/to/app.js"></script>
+</body>
+</html>

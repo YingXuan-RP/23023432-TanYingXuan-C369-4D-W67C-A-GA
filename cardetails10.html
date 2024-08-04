@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CarBarter Car Details</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        .navbar {
+            background-color: #002F5D;
+        }
+
+        .navbar-brand img {
+            width: 150px;
+        }
+
+        .hero-section {
+            background-color: #002F5D;
+            color: #fff;
+            padding: 20px 0;
+        }
+
+        .hero-section .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .hero-section .search-bar {
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-section .search-bar input,
+        .hero-section .search-bar button {
+            margin: 0 5px;
+        }
+
+        .car-title-section {
+            padding: 20px 0;
+            background-color: #fff;
+            border-bottom: 1px solid #dee2e6;
+        }
+
+        .car-title-section h1 {
+            font-size: 2rem;
+        }
+
+        .car-title-section .price-section {
+            display: flex;
+            align-items: center;
+        }
+
+        .price-section .btn {
+            margin-left: 20px;
+            width: 150px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .car-details-section {
+            margin-top: 20px;
+        }
+
+        .car-details-section .main-img img {
+            width: 100%;
+            max-width: 500px; 
+            height: auto;
+        }
+
+        .car-details-section .thumbnails img {
+            width: 100px;
+            height: auto;
+            margin-right: 10px;
+        }
+
+        .contact-seller {
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #dee2e6;
+            border-radius: 5px;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #fff;
+            border-top: 1px solid #dee2e6;
+        }
+
+        .listing-item {
+            margin-bottom: 20px;
+            background-color: #fff;
+            border: 1px solid #dee2e6;
+            border-radius: 5px;
+            padding: 15px;
+        }
+
+        .listing-item img {
+            width: 100%;
+            height: auto;
+        }
+
+        .listing-item .price {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .listing-item .description {
+            margin-top: 10px;
+        }
+
+        .card-custom {
+            margin-top: 20px;
+        }
+
+        .btn-custom {
+            margin-bottom: 10px;
+        }
+
+        .recently-viewed img {
+            width: 100px;
+            height: auto;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="#">
+            <img src="logo.png" alt="CarBarter Logo">
+        </a>
+        <div class="ml-auto">
+            <a href="#" class="btn btn-outline-secondary">Home</a>
+            <a href="#" class="btn btn-outline-secondary">Explore</a>
+            <a href="#" class="btn btn-outline-secondary">Listings</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="search-bar">
+                <input type="text" class="form-control" placeholder="Make">
+                <input type="text" class="form-control" placeholder="Model">
+                <button class="btn btn-primary">Search</button>
+            </div>
+        </div>
+    </section>
+<!-- Car Details Section -->
+<section class="car-title-section mt-5">
+    <h2>Car Details</h2>
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-12">
+                <h1>Volvo XC 90</h1>
+                <p>2.0h T8 11.6kWh Polestar Engineered Auto AWD (s/s) 5dr</p>
+            </div>
+        </div>
+        <div class="row align-items-center">
+            <div class="col-md-8">
+                <div class="main-img mb-3">
+                    <img src="volvoXC90-2023.jpg" alt="Volvo XC 90" class="img-fluid">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card card-custom">
+                    <div class="card-body">
+                        <h4 class="card-title">Price: S$260,000</h4>
+                        <button onclick="window.location.href='information11.html'"class="btn btn-info btn-block btn-custom">Buy Now</button>
+                        <button class="btn btn-warning btn-block btn-custom">Make an Offer Price</button>
+                        <button class="btn btn-primary btn-block btn-custom">View VIN Report</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+            </div>
+            <div class="col-md-4">
+                <div class="card contact-seller">
+                    <div class="card-body">
+                        <h4 class="card-title">YP Car Dealer</h4>
+                        <p class="card-text"><a href="tel:3025550107">(302) 555-0107</a></p>
+                        <form>
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Name">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Phone">
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="form-control" placeholder="Email">
+                            </div>
+                            <div class="form-group">
+                                <textarea class="form-control" rows="3" placeholder="I am interested in a price quote on this vehicle. Please contact me at your earliest convenience with your best price for this vehicle."></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block btn-custom">Send Message</button>
+                            <button type="button" class="btn btn-success btn-block btn-custom">WhatsApp</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-md-12">
+                <h4>Description</h4>
+                <p>The all-new Volvo XC60 is a terrific luxury compact SUV. It’s been fully redesigned for 2017 and features improvements across the board. These changes bump the vehicle from its previous midpack standing; it now resides with some of the best in the class. Some of the most notable improvements include a state-of-the-art infotainment system, more legroom for rear passengers, and a stronger engine lineup.</p>
+                <p>Outstanding craftsmanship and the finest materials ensure this stunning penthouse apartment ranks amongst one of the most sought-after design houses in London and represents an utterly unique opportunity to own a globally significant property.</p>
+                <p>The Amrutha Lounge means port in the Turkish language, however the restaurant opens its doors to all aspects of the Mediterranean kitchen. The kitchen will be mostly focused on Mediterranean food; the owners of the restaurant are young professional chefs who can bring new, exciting tastes to Angel, Islington which will show through in the quality of food they prepare.</p>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-md-12">
+                <h4>Overview</h4>
+                <table class="table table-striped">
+                    <tbody>
+                        <tr>
+                            <th>Make</th>
+                            <td>Volvo</td>
+                        </tr>
+                        <tr>
+                            <th>Model</th>
+                            <td>XC 90</td>
+                        </tr>
+                        <tr>
+                            <th>Color</th>
+                            <td>White</td>
+                        </tr>
+                        <tr>
+                            <th>Drive Type</th>
+                            <td>4x4</td>
+                        </tr>
+                        <tr>
+                            <th>Fuel Type</th>
+                            <td>Hybrid</td>
+                        </tr>
+                        <tr>
+                            <th>Transmission</th>
+                            <td>Automatic</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <div class="footer">
+        <p>&copy; 2024 CarBarter. All rights reserved.</p>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="path/to/app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CarBarter</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .navbar-custom {
+            background-color: #00334e;
+        }
+        .navbar-custom .navbar-brand, .navbar-custom .nav-link {
+            color: white;
+        }
+        .tab-custom {
+            background-color: #ffc107;
+            color: black;
+            padding: 10px 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        .tab-custom.active {
+            background-color: #e0a800;
+        }
+        .content-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .footer {
+            background-color: #00334e;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <a class="navbar-brand" href="#">
+            <img src="logo.png"  height="40" class="d-inline-block align-top" alt="logo">
+        </a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Workflow</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Cash Management</a>
+                </li>
+                <li class="nav-item">
+                    <span class="nav-link">CarBarter Staff</span>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <h3>Loan origination for automotive Finance</h3>
+        <div class="content-container mt-4">
+            <h4>Cash Management</h4>
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                    <a class="nav-link active tab-custom" data-toggle="tab" href="#cashFlow">Cash Flow Management</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link tab-custom" data-toggle="tab" href="#paymentInfo">Payment Information</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link tab-custom" data-toggle="tab" href="#loanMgmt">Loan Management</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link tab-custom" data-toggle="tab" href="#creditLine">Credit Line from Bank</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link tab-custom" data-toggle="tab" href="#investorsMgmt">Investors Management</a>
+                </li>
+            </ul>
+
+            <div class="tab-content mt-4">
+                <div id="cashFlow" class="container tab-pane active">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h5>Cash Balance</h5>
+                            <canvas id="cashBalanceChart" width="400" height="200"></canvas>
+                        </div>
+                        <div class="col-md-6">
+                            <h5>Days Sales Outstanding</h5>
+                            <canvas id="daysSalesOutstandingChart" width="400" height="200"></canvas>
+                        </div>
+                        <div class="col-md-6 mt-4">
+                            <h5>Days Payable Outstanding</h5>
+                            <canvas id="daysPayableOutstandingChart" width="400" height="200"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <div id="paymentInfo" class="container tab-pane fade">
+                    <!-- Payment Information content -->
+                </div>
+                <div id="loanMgmt" class="container tab-pane fade">
+                    <!-- Loan Management content -->
+                </div>
+                <div id="creditLine" class="container tab-pane fade">
+                    <!-- Credit Line from Bank content -->
+                </div>
+                <div id="investorsMgmt" class="container tab-pane fade">
+                    <!-- Investors Management content -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer mt-5">
+        <p>Together, let's make your car buying journey seamless. Our advanced technology empowers every step.</p>
+        <p>© 2024 CarBarter Pte Ltd. All rights reserved</p>
+    </div>
+
+    <script>
+        // Cash Balance Chart
+        var ctx = document.getElementById('cashBalanceChart').getContext('2d');
+        var cashBalanceChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['IN', 'OUT'],
+                datasets: [{
+                    label: 'Cash Balance',
+                    data: [23000000, 16000000],
+                    backgroundColor: [
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(255, 99, 132, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(255, 99, 132, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+
+        // Days Sales Outstanding Chart
+        var ctx2 = document.getElementById('daysSalesOutstandingChart').getContext('2d');
+        var daysSalesOutstandingChart = new Chart(ctx2, {
+            type: 'bar',
+            data: {
+                labels: ['Days Sales Outstanding'],
+                datasets: [{
+                    label: 'Days',
+                    data: [25],
+                    backgroundColor: [
+                        'rgba(153, 102, 255, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(153, 102, 255, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+
+        // Days Payable Outstanding Chart
+        var ctx3 = document.getElementById('daysPayableOutstandingChart').getContext('2d');
+        var daysPayableOutstandingChart = new Chart(ctx3, {
+            type: 'bar',
+            data: {
+                labels: ['Days Payable Outstanding'],
+                datasets: [{
+                    label: 'Days',
+                    data: [30],
+                    backgroundColor: [
+                        'rgba(255, 159, 64, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(255, 159, 64, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="path/to/app.js"></script>
+</body>
+</html>

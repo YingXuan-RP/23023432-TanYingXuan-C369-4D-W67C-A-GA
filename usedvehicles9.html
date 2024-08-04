@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CarBarter - Used Vehicles For Sale</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        .navbar {
+            background-color: #002F5D;
+        }
+
+        .navbar-brand img {
+            width: 150px;
+        }
+
+        .hero-section {
+            background-color: #002F5D;
+            color: #fff;
+            padding: 20px 0;
+        }
+
+        .hero-section .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .search-bar .form-control {
+            border-radius: 20px;
+        }
+
+        .search-bar .btn {
+            border-radius: 20px;
+            background-color: #ffcc00;
+            color: #fff;
+            border: none;
+        }
+
+        .car-listing {
+            margin-top: 20px;
+        }
+
+        .car-listing .card {
+            margin-bottom: 20px;
+        }
+
+        .car-listing .card img {
+            width: 100%;
+            height: auto;
+        }
+
+        .recently-viewed {
+            margin-top: 20px;
+        }
+
+        .recently-viewed .list-group-item {
+            display: flex;
+            align-items: center;
+        }
+
+        .recently-viewed .list-group-item img {
+            width: 50px;
+            height: auto;
+            margin-right: 10px;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #fff;
+            border-top: 1px solid #dee2e6;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="#">
+            <img src="logo.png" alt="CarBarter Logo">
+        </a>
+        <div class="ml-auto">
+            <a href="dashboard5.html" class="btn btn-outline-secondary">Home</a>
+            <a href="#" class="btn btn-outline-secondary">Explore</a>
+            <a href="listing7.html" class="btn btn-outline-secondary">Listings</a>
+        </div>
+    </nav>
+
+    <section class="hero-section">
+        <div class="container">
+            <h1>Used Vehicles For Sales</h1>
+            <div class="search-bar">
+                <form class="form-inline">
+                    <input type="text" class="form-control mr-2" placeholder="Make">
+                    <input type="text" class="form-control mr-2" placeholder="Model">
+                    <button type="submit" class="btn">Search</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="row car-listing">
+            <div class="col-md-8">
+                <div class="card mb-3">
+                    <div class="row no-gutters">
+                        <div class="col-md-4">
+                            <img src="Mercedes.jpg" class="card-img" alt="Mercedes-Benz S 580 - 2021">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <a href="cardetails10.html"><h5 class="card-title">Mercedes-Benz S 580 - 2021</a></h5>
+                                <p class="card-text">S$129</p>
+                                <p class="card-text"><small class="text-muted">4.7 (684 reviews)</small></p>
+                                <p class="card-text">
+                                    <span>4789 km</span> | <span>Diesel</span> | <span>Automatic</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card mb-3">
+                    <div class="row no-gutters">
+                        <div class="col-md-4">
+                            <img src="volvoXC90-2023.jpg" class="card-img" alt="Volvo XC90 - 2023">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <a href="cardetails10.html"><h5 class="card-title">Volvo XC90 - 2023</a></h5>
+                                <p class="card-text">S$260,000</p>
+                                <p class="card-text"><small class="text-muted">4.7 (684 reviews)</small></p>
+                                <p class="card-text">
+                                    <span>4789 km</span> | <span>Diesel</span> | <span>Automatic</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card mb-3">
+                    <div class="row no-gutters">
+                        <div class="col-md-4">
+                            <img src="560.jpg" class="card-img" alt="Mercedes-Benz S 560 - 2021">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <a href="cardetails10.html"><h5 class="card-title">Mercedes-Benz S 560 - 2021</a></h5>
+                                <p class="card-text">S$160,000</p>
+                                <p class="card-text"><small class="text-muted">4.7 (565 reviews)</small></p>
+                                <p class="card-text">
+                                    <span>6786 km</span> | <span>Diesel</span> | <span>Automatic</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card mb-3">
+                    <div class="row no-gutters">
+                        <div class="col-md-4">
+                            <img src="BMW.png" class="card-img" alt="BMW M8 Gran Coupe Base - 2023">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <a href="cardetails10.html"><h5 class="card-title">BMW M8 Gran Coupe Base - 2023</a></h5>
+                                <p class="card-text">S$240,000</p>
+                                <p class="card-text"><small class="text-muted">4.7 (323 reviews)</small></p>
+                                <p class="card-text">
+                                    <span>4789 km</span> | <span>Diesel</span> | <span>Automatic</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <h5>Recently Viewed</h5>
+                <ul class="list-group recently-viewed">
+                    <li class="list-group-item">
+                        <img src="BMW.png" alt="BMW M8 Gran Coupe Base - 2021">
+                        <div>
+                            <h6>BMW M8 Gran Coupe Base - 2021</h6>
+                            <p>S$129</p>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <img src="Bentley Bentayga V8 Bentley Bentayga V8 - 2020.png" alt="Bentley Bentayga V8 - 2020">
+                        <div>
+                            <h6>Bentley Bentayga V8 - 2020</h6>
+                            <p>S$129</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        &copy; 2024 CarBarter Pte Ltd. All rights reserved.
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="path/to/app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CarBarter - Create Account</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
+        }
+
+        .full-page {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            background-image: url('car.jpg');
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            position: relative;
+        }
+
+        .logo {
+            width: 150px;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            flex: 1;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 600px;
+            margin: auto;
+        }
+
+        .content h1 {
+            font-size: 3rem; 
+            margin-bottom: 20px;
+        }
+
+        .content p {
+            font-size: 1.5rem;
+            margin-bottom: 30px; 
+        }
+
+        .form-check {
+            font-size: 1.5rem;
+            margin: 15px 0;
+        }
+
+        .form-check-inline {
+            margin-right: 20px; 
+        }
+
+        footer {
+            margin-top: 20px;
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .highlight {
+            color:  #f1c40f;
+        }
+
+        h1 {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="full-page">
+        <img src="logo.png" alt="CarBarter Logo" class="logo">
+        <div class="content">
+            <h1>Welcome to <span class="highlight">CarBarter</span>!</h1>
+            <p>Create your account to start your journey with us.</p>
+            <form id="signupForm" action="createaccount.html" method="post">
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="role" value="buyer" id="buyer">
+                    <label class="form-check-label" for="buyer">Buyer</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="role" value="dealer" id="dealer">
+                    <label class="form-check-label" for="dealer">Dealer</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="role" value="staff" id="staff">
+                    <label class="form-check-label" for="staff">CarBarter Staff</label>
+                </div>
+                <div>
+                    <button type="submit" class="btn btn-primary mt-3">Continue</button>
+                </div>
+            </form>
+            <footer>
+                <p>© 2024 CarBarter Pte Ltd. All rights reserved</p>
+            </footer>
+        </div>
+    </div>
+    <script>
+        document.getElementById('signupForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const roles = document.getElementsByName('role');
+            let selectedRole = '';
+
+            for (let i = 0; i < roles.length; i++) {
+                if (roles[i].checked) {
+                    selectedRole = roles[i].value;
+                    break;
+                }
+            }
+
+            if (selectedRole === 'buyer') {
+                window.location.href = 'buyer3.html';
+            } else if (selectedRole === 'dealer') {
+                window.location.href = 'dealer4.html';
+            } else if (selectedRole === 'staff') {
+                window.location.href = 'workflow12.html';
+            } else {
+                alert('Please select a role to continue.');
+            }
+        });
+    </script>
+    <!-- Bootstrap JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
